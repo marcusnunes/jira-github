@@ -11,7 +11,10 @@ Ex: https://github.com/ztech-company/donus-rn/settings/secrets
 ### `JIRA_USER`
 ### `JIRA_PASSWORD`
 
-## 3) Copiar arquivos `.github/workflows/jira-integration.yml` e `jira-integration.js`**
+## 3) Copiar arquivos
+
+### `.github/workflows/jira-integration.yml`
+### `jira-integration.js`
 
 Axios pode ser substituido pelo Node HTTP para não ter dependências. Caso seu script utilize o axios, copie também o `package.json`.
 
