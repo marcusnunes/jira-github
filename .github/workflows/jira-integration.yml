@@ -18,14 +18,6 @@ jobs:
       with:
         node-version: '12.x'
 
-    - name: Cache node_modules
-      uses: actions/cache@v1
-      with:
-        path: node_modules
-        key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-        restore-keys: |
-          ${{ runner.os }}-yarn-
-
     - name: Pull request
       if: ${{ github.event_name == 'pull_request' }}
       env:
@@ -34,8 +26,7 @@ jobs:
         JIRA_USER: ${{ secrets.JIRA_USER }}
         JIRA_PASSWORD: ${{ secrets.JIRA_PASSWORD }}
       run: |
-        yarn
-        node jira-integration.js
+        node scripts/jira-integration.js
 
     - name: Merge
       if: ${{ github.event_name == 'push' }}
@@ -45,5 +36,4 @@ jobs:
         JIRA_USER: ${{ secrets.JIRA_USER }}
         JIRA_PASSWORD: ${{ secrets.JIRA_PASSWORD }}
       run: |
-        yarn
-        node jira-integration.js
+        node scripts/jira-integration.js
