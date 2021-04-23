@@ -15,7 +15,3 @@ Ex: https://github.com/ztech-company/donus-rn/settings/secrets
 
 #### `.github/workflows/jira-integration.yml`
 #### `jira-integration.js`
-
-Axios pode ser substituido pelo Node HTTP para não ter dependências. Caso seu script utilize o axios, copie também o `package.json`.
-
-https://nodejs.org/api/http.html
