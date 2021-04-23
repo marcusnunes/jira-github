@@ -26,7 +26,7 @@ jobs:
         JIRA_USER: ${{ secrets.JIRA_USER }}
         JIRA_PASSWORD: ${{ secrets.JIRA_PASSWORD }}
       run: |
-        node scripts/jira-integration.js
+        node jira-integration.js
 
     - name: Merge
       if: ${{ github.event_name == 'push' }}
@@ -36,4 +36,4 @@ jobs:
         JIRA_USER: ${{ secrets.JIRA_USER }}
         JIRA_PASSWORD: ${{ secrets.JIRA_PASSWORD }}
       run: |
-        node scripts/jira-integration.js
+        node jira-integration.js
