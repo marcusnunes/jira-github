@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 const https = require('https');
 
-const jiraURL = 'https://z-tech.atlassian.net/rest/api/latest/issue';
+const jiraURL = process.env.JIRA_API;
 const jiraUser = process.env.JIRA_USER;
 const jiraPassword = process.env.JIRA_PASSWORD;
 
