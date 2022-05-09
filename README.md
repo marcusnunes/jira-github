@@ -23,4 +23,5 @@ github > settings > secrets
 ### 3) copy the files
 
 `.github/workflows/jira-integration.yml`
+
 `jira-integration.js`
