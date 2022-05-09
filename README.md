@@ -1,17 +1,26 @@
 # jira-github
 
-### 1) criar API token do Jira para seu usuário
+Move your JIRA cards automatically with your PRs
+
+-------
+
+### 1) create a JIRA API token for your username
 
 https://id.atlassian.com/manage-profile/security/api-tokens
 
-### 2) criar váriaveis de ambiente com login/senha do JIRA nos secrets do repositório
 
-Ex: https://github.com/ztech-company/donus-rn/settings/secrets
+### 2) create secrets with your environment variables  inside your repository
 
-#### `JIRA_USER`
-#### `JIRA_PASSWORD`
+github > settings > secrets
 
-### 3) copiar arquivos
+`JIRA_API` - eg: 'https://demo.atlassian.net/rest/api/latest/issue'
 
-#### `.github/workflows/jira-integration.yml`
-#### `jira-integration.js`
+`JIRA_USER`
+
+`JIRA_PASSWORD`
+
+
+### 3) copy the files
+
+`.github/workflows/jira-integration.yml`
+`jira-integration.js`
